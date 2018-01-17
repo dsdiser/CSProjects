@@ -1,0 +1,91 @@
+Script started on Fri 27 Oct 2017 02:06:30 PM EDT
+[ddiser1@linux2 hw4]make
+yacc -d -v calc.y
+cc    -c -o y.tab.o y.tab.c
+lex calc.l
+cc    -c -o lex.yy.o lex.yy.c
+cc -o calc y.tab.o lex.yy.o -lfl -lm 
+[ddiser1@linux2 hw4]sc[K[K./calc
+331 Calculator
+(type ? for help and . to exit)
+
+>> + 2 3
+5
+
+>> e .
+Exiting 331 calc
+[ddiser1@linux2 hw4]./calc < input
+331 Calculator
+(type ? for help and . to exit)
+
+>> Enter an expression in infix notation followed by a newline.
+Operators include +, -, * and =.  Defined functions include
+sqrt, exp and log.  You can assign a variable using the =
+operator. Type . to exit.  Syntax errors will terminate the
+program, so be careful.
+
+>> 1
+
+>> 0
+
+>> 3
+
+>> 6
+
+>> 6
+
+>> 1
+
+>> 10
+
+>> 20
+
+>> 14
+
+>> 100
+
+>> 100
+
+>> 101
+
+>> 1
+
+>> 0
+
+>> 1
+
+>> 1
+
+>> 1
+
+>> 0
+
+>> 1
+
+>> 1
+
+>> 1
+
+>> 1
+
+>> 1
+
+>> 1
+
+>> 1
+
+>> 1
+
+>> 1
+
+>> 100
+
+>> 200
+
+>> -1
+
+>> Exiting 331 calc
+[ddiser1@linux2 hw4]exit
+exit
+
+Script done on Fri 27 Oct 2017 02:07:00 PM EDT

@@ -1,0 +1,15 @@
+# File: hw3_part4.py
+# Author: Daniel Diseroad
+# Date: 9/22/16
+# Section: 28
+# E-mail: ddiser1@umbc.edu
+# Description:
+# This program asks for a day of the month and gives the user the corresponding day of the
+# week.
+# Collaboration:
+# I did not collaborate with anyone on this assignment.
+def main():
+    monthNum = int(input("Please enter the day of the month: "))
+    dayNum = 10 % monthNum
+    print(dayNum)
+main()

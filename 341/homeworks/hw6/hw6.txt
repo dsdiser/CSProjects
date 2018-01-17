@@ -1,0 +1,177 @@
+Name: Daniel Diseroad
+Userid: PG50694
+
+CMSC 341 Fall 2017 Homework 6
+
+
+-------------------------------------------------------------------
+Question A (15 points) 
+-------------------------------------------------------------------
+
+Suppose we use the MAD method for hashing into a hash table with 13
+slots with parameters a = 3 and b = 5. That is, key k is hashed into 
+slot number (3*k + 5) % 13. 
+
+Show the placement of the keys after inserting the following keys 
+in the given order into the hash table using separate chaining to
+handle collisions. 
+
+Keys inserted (in order):  8 10 25 2 31 12 5 18 
+
+Type in each key on the same line as the index of the slot 
+where it is eventually inserted.
+
+   0: 
+   1:
+   2: 25 12
+   3: 8
+   4:
+   5:
+   6:
+   7: 31 5 18
+   8:
+   9: 10
+  10:
+  11: 2
+  12:
+
+
+-------------------------------------------------------------------
+Question B (15 points) 
+-------------------------------------------------------------------
+
+Repeat Question A using linear probing to handle collisions.
+
+Keys inserted (in order):  8 10 25 2 31 12 5 18 
+
+Type in each key on the same line as the index of the slot 
+where it is eventually inserted.
+
+   0: 
+   1:
+   2: 25
+   3: 8
+   4: 12
+   5:
+   6:
+   7: 31
+   8: 5
+   9: 10
+  10: 18
+  11: 2
+  12:
+
+
+-------------------------------------------------------------------
+Question C (15 points) 
+-------------------------------------------------------------------
+
+Repeat Question A using quadratic probing to handle collisions.
+
+Keys inserted (in order):  8 10 25 2 31 12 5 18 
+
+Type in each key on the same line as the index of the slot 
+where it is eventually inserted.
+
+   0: 
+   1:
+   2: 25
+   3: 8
+   4:
+   5:
+   6: 12
+   7: 31
+   8: 5
+   9: 10
+  10: 18
+  11: 2
+  12:
+
+
+-------------------------------------------------------------------
+Question D  (35 points total)
+-------------------------------------------------------------------
+
+We want to support the operations Insert(), Find() and Max() for 
+a program that uses n Insert(), n Find() and 15 Max() operations.
+These operations can be performed in any order. The Max() operation 
+simply reports the maximum valued stored in the data structure
+at the time of the call.
+
+1. (5 points) Suppose that we use a red-black tree to support this
+program. What is the asymptotic worst case running time for 
+n Insert(), n Find() and 15 Max() operations?
+
+   (a) O(n) 
+   (b) O(n log n)
+   (c) O(n^2)
+   (d) O(n^2 log n) 
+   (e) O(n^3)
+
+Answer:  
+B
+
+2. (5 points) BRIEFLY explain your choice above.
+	In a red-black tree, the runtime of insert and find is O(log n) with the runtime of
+	max being O(n). That means that in this case the worst case running time for both 
+	insert and find will be O(n log n) and max will be O(n) making the worst case
+	running time O(n log n).
+
+
+
+
+3. (5 points) Suppose that we use a binary max heap to support this
+program. What is the asymptotic worst case running time for   
+n Insert(), n Find() and 15 Max() operations?
+
+   (a) O(n)     
+   (b) O(n log n)
+   (c) O(n^2)
+   (d) O(n^2 log n) 
+   (e) O(n^3)
+
+Answer:  
+C
+
+4. (5 points) BRIEFLY explain your choice above.
+	In a binary heap, the runtime of insert is O(1) and find is O(n), with the runtime of
+	max being O(n). That means that in this case the worst case running time for both 
+	insert will be O(n), find will be O(n^2) and max will be O(n) making the worst case
+	running time O(n^2).
+
+
+
+
+5. (5 points) Suppose that we use a hash table with a "good"
+hash function to support this program. What is the asymptotic 
+"average" running time for n Insert(), n Find() and 15 Max() 
+operations?
+
+   (a) O(n)     
+   (b) O(n log n)
+   (c) O(n^2)
+   (d) O(n^2 log n) 
+   (e) O(n^3)
+
+Answer:  
+A
+
+
+6. (5 points) BRIEFLY explain your choice above.
+	In a hash table, the average runtime of insert and find is O(1) with the runtime of
+	max being O(n). That means in this case the runtime of insert and find will be O(n)
+	and the runtime of max will still be O(n), making the average running time O(n).
+
+
+
+
+7. (5 points) Which of these three data structures would you
+pick to support n Insert(), n Find() and 15 Max() operations?
+Briefly justify your answer.
+	I would use the hash table in order to support those functions. As long as the 
+	hashing algorithm is good, the average runtime of the those functions will be 
+	O(n), better than that of the binary heap and red-black tree.
+
+
+
+

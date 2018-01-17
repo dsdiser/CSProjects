@@ -1,0 +1,48 @@
+331 Calculator
+(type ? for help and . to exit)
+
+>> Enter an expression in infix notation followed by a newline.
+Operators include +, -, * and =.  Defined functions include
+sqrt, exp and log.  You can assign a variable using the =
+operator. Type . to exit.  Syntax errors will terminate the
+program, so be careful.
+
+>> 100
+
+>> 2
+
+>> 7
+
+>> 9
+
+>> 0
+
+>> 100
+
+>> 100
+
+>> 200
+
+>> 0
+
+>> 1
+
+>> 1
+
+>> 1
+
+>> -42
+
+>> 42
+
+>> 4
+
+>> 43
+
+>> -41
+
+>> 1
+
+>> 6
+
+>> Exiting 331 calc

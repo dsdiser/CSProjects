@@ -1,0 +1,56 @@
+#include "Card.h"
+
+Card::Card()
+{
+  m_type = 9;
+  m_desc = "Invalid Card";
+}
+
+Card::Card(int type, string desc)
+{
+  m_type = type;
+  m_desc = desc;
+}
+
+int Card::GetType()
+{
+  return m_type;
+}
+
+string Card::ToString()
+{
+//Switch statement denoting which type the card is based off of the member
+//variable "m_type"
+  string output;
+  switch(m_type)
+    {
+    case 0:
+      output = "Bomb -";
+      break;
+    case 1:
+      output =  "Defuse -";
+      break;
+    case 2:
+      output = "Attack -";
+      break;
+    case 3:
+      output = "Skip -";
+      break;
+    case 4:
+      output = "Peek -";
+      break;
+    case 5:
+      output = "Shuffle -";
+      break;
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+      output = "Normal Card -";
+      break;
+    default:
+      output = "No type -";
+    }
+  output += m_desc;
+  return output;
+}

@@ -1,0 +1,48 @@
+# File: hw1.py
+# Author: Daniel Diseroad
+# Date: 9/10/2016
+# Section: 28
+# E-mail: ddiser1@umbc.edu
+# Description:
+# This exercise is to help students understand algorithms
+# Collaboration: I collaborated with Alex Miu (ale18@umbc.edu) on question 4
+# we helped each other learn how to make waffles.
+
+
+Question 1
+
+1.	 Take all of the books off of the shelf and place them on the floor.
+2.	 Look through all of the books, finding the one which author’s last name is closest          to the letter A in the alphabet.
+3.	 Place that book on the shelf after all of the other books. 
+4.	 Look through all of the books, finding the one which author’s last name is closest          to the author’s last name of the book last placed on the shelf.
+5.	 If the author’s last names start with the same letter, compare the next letters in          the last name one by one to see which one comes later in the alphabet. Place the            book which comes later in the alphabet to the right of the other book. 
+6.	 Else, place that book on the shelf after all of the other books.
+7.	 Repeat steps 4-6 until all of the books have been placed on the shelf.
+
+Question 2
+
+1.	 Get word and find which letter of the alphabet it starts with.
+2.	 Look at the sections in the dictionary, comparing your letter with the rest of the          letter headings until it matches.
+3.	 Look through the pages of that section until you find those which contain words             that the first two letter of match the first two of your word.
+4.	 Using those pages, compare each word in the dictionary to your word until they              match.
+5.	 Read the definition of your word.
+
+Question 3
+
+1.	 Get word, reversing the letters, and write it down on a piece of paper.
+2.	 Take the original word and write it over top of the reversed word, overlapping the          letters.
+3.	 If you are left with a complete word, not a word with scrambled letters, your               original word is a palindrome.
+4.	 Otherwise, your word is not a palindrome.
+
+Question 4
+
+1.	 Plug in your waffle iron.
+2.	 Look at the required ingredients on the waffle box mix.
+3.	 Open the waffle box mix and dump all of the required ingredients into a container           and mix them. 
+4.	 If the waffle iron is hot enough, pour enough waffle mix to fill up the waffle iron. 
+5.	 Else, wait until the waffle iron is hot enough, then pour waffle mix into the iron.
+6.	 When steam starts to come out of the waffle iron, open up the waffle iron and use           tongs to grab the waffle out of the iron, putting it on the plate.
+7.	 Repeat steps 4-6 until you are out of waffle mix.
+8.	 If you want more waffles, repeat steps 2-7 until you are satisfied with the number          of waffles you have.
+9.	 Eat waffles and enjoy!
+

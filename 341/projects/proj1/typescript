@@ -1,0 +1,25 @@
+Script started on Wed 13 Sep 2017 04:17:36 PM EDT
+[ddiser1@linux2 proj1]g++ -I ../../00Proj1 ../../00Proj1/p1test01.cpp InnerCB.cpp - o t01.out
+g++: ../../00Proj1/p1test01.cpp: No such file or directory
+InnerCB.cpp:11: error: default argument given for parameter 1 of ‘InnerCB::InnerCB(int)’
+InnerCB.h:16: error: after previous specification in ‘InnerCB::InnerCB(int)’
+InnerCB.cpp: In constructor ‘InnerCB::InnerCB(int)’:
+InnerCB.cpp:16: error: expected type-specifier before ‘Int’
+InnerCB.cpp:16: error: expected ‘;’ before ‘Int’
+InnerCB.cpp: In copy constructor ‘InnerCB::InnerCB(const InnerCB&)’:
+InnerCB.cpp:25: error: expected type-specifier before ‘Int’
+InnerCB.cpp:25: error: expected ‘;’ before ‘Int’
+InnerCB.cpp: In member function ‘void InnerCB::enqueue(int)’:
+InnerCB.cpp:40: error: expected primary-expression before ‘;’ token
+InnerCB.cpp: In member function ‘int InnerCB::dequeue()’:
+InnerCB.cpp:50: error: ‘m_front’ was not declared in this scope
+InnerCB.cpp:57: error: expected primary-expression before ‘;’ token
+InnerCB.cpp: At global scope:
+InnerCB.cpp:86: error: ‘const InnerCB& operator=(const InnerCB&)’ must be a nonstatic member function
+InnerCB.cpp: In member function ‘void InnerCB::dump()’:
+InnerCB.cpp:102: error: ‘cout’ was not declared in this scope
+InnerCB.cpp:102: error: ‘endl’ was not declared in this scope
+[ddiser1@linux2 proj1]exit
+exit
+
+Script done on Wed 13 Sep 2017 04:17:52 PM EDT

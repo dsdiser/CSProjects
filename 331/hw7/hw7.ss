@@ -1,0 +1,113 @@
+#lang scheme
+;; UMBC CMSC 331 Fall 2017, HW7, YOUR NAME, YOUR_USERNAME@UMBC.EDU
+
+(define (pass) null)
+
+;; (1) Enigma: put your answer to problem one as a comment here.  User
+;; as many lines as you need
+
+;; takes in a list
+;; returns #f if any of the items in the list nest to each other are equal
+;; returns #t otherwise
+
+(define (enigma x)
+  ;; the enigma function
+  (or (null? x)
+      (null? (rest x))
+      (and (not (equal? (car x) (car (cdr x))))
+           (enigma (rest x)))))
+
+;; (2) connumdrum put your answer to problem two as a comment here.
+;; User as many lines as you need.
+
+;; argument y needs to be a list, while argument x can be a list or atom
+;; locates where x is in the list y (the index), returns -1 if x cannot be found
+
+(define (conundrum x y)
+  ;; The amazing function conundrum ...
+  (cond ((null? y) -1)
+        ((equal? x (first y)) 0)
+        (else (let ((z (conundrum x (rest y))))
+                   (if (< z 0) z (+ 1 z))))))
+
+
+;; (3.1) Replace ONLY the commented with your actual implementation,
+;; W/O CHANGING THE FIRST LINE!
+
+(define do-nothing
+  (lambda () 0) ;; replace this line with a LAMBDA EXPRESSION
+  )
+
+;; (3.2) Replace ONLY the commented with your actual implementation,
+;; W/O CHANGING THE FIRST LINE!
+
+(define first-str
+  (lambda (x y)
+    (if (string<? x y)
+    x
+    y)
+    )
+  )
+
+;; (3.3) Replace ONLY the commented with your actual implementation,
+;; W/O CHANGING THE FIRST LINE!
+
+(define converse-func
+  (lambda (some-func) 
+    (lambda arg
+      (not(apply some-func arg)))
+    )
+  )
+
+;; complete the following as answers to the remaining problems.  add
+;; as many additional functions as needed.  Please add appropriate
+;; comments to your functions.
+
+;; (4) unique-atoms
+
+(define (unique-atoms s)
+  ;; given an s-expression s, returns a list of the unique atoms in s.
+  ;; The order is not important.  e.g.: (unique-atoms? '(a a)) => (a),
+  ;; (unique-atoms? '(a (b (c (a))))) => (a b c), (unique-atoms? '())
+  ;; => ()
+  (unique-members (atoms s) '())
+  )
+
+(define (atoms s)
+  (cond ((null? s) null)
+        ((pair? s) (append (atoms (car s)) (atoms (cdr s))))
+        (else (list s)))
+  )
+
+(define (unique-members s unique)
+  (if (null? s)
+      unique
+      (if (list? s)
+	  (if (member (car s) unique)
+	      (unique-members (cdr s) unique)
+	      (unique-members (cdr s) (append unique (list (car s)))))
+	  (if (member s unique)
+	      unique
+	      (cons unique s)
+	      )))
+  )
+
+;; (5) reverse-tree
+
+(define (reverse-tree s)
+  ;; given an s-expression s, returns the complete reversal of that
+  ;; s-expression: not only the top-level list, but every nested sub-list,
+  ;; is reversed.
+  ;; So, "(reverse-tree '(a b (c d) (e (f g h))))" will yield:
+  ;; '(((h g f) e) (d c) b a)
+  (if (list? s)
+      (map reverse-tree (reverse s))
+      s
+      )
+  )
+
+(provide
+  enigma conundrum
+  do-nothing first-str converse-func
+  unique-atoms
+  reverse-tree)

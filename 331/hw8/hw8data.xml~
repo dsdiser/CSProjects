@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<student>
+  <name>John</name>
+  <age>18</age>
+  <address>123 Elm St.</address>
+  <mother>
+    <name>Jane</name>
+    <age>48</age>
+  </mother>
+</student>

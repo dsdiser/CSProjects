@@ -1,0 +1,91 @@
+# File: hw8.py
+# Author: Daniel Diseroad
+# Date: 11/17/16
+# Section: 28
+# E-mail: ddiser1@umbc.edu
+# Description:
+# This program simulates the sorting hat from the Harry Potter series.
+# Collaboration:
+# I did not collaborate with anyone on this assignment.
+import random
+def printOneHouse(hogwarts,houseWanted):
+    houses = hogwarts.keys()
+    counter = 0
+    for i in houses:
+        if i == houseWanted:
+            print("The members of the House of",houseWanted,"are:")
+            for i in hogwarts[houseWanted]:
+                print(i)
+        else:
+            counter+=1
+            if counter == len(houses):
+                print("There is no house by the name of",houseWanted)
+
+def printAllHouses(hogwarts):
+    houses = hogwarts.keys()
+    for i in houses:
+        printOneHouse(hogwarts,i)
+
+def houseSort(hogwarts):
+    keys = hogwarts.keys()
+    houses = []
+    for i in keys:
+        houses.append(i)
+    chance = (len(houses)+1)/(2*len(houses))
+    print(chance)
+    randomNum = random.random()
+    print(randomNum)
+    name = input("What is the person's name? ")
+    name = " "+name
+    houseWanted = input("What house do they prefer? ")
+    houses.remove(houseWanted)
+    if randomNum<= chance:
+        hogwarts[houseWanted].append(name)
+        print(name,"was sorted into house",houseWanted)
+        return hogwarts
+    else:
+        houseChosen = random.choice(houses)
+        hogwarts[houseChosen].append(name)
+        print(name,"was sorted into house",houseChosen)
+        return hogwarts
+
+def readFile(file):
+    hogwarts = {}
+    houseCheck = ""
+    for line in file:
+        house,name = line.strip().split(",")
+        if (house in hogwarts):
+            hogwarts[house].append(name)
+        else:
+            hogwarts[house] = [name]
+    return hogwarts
+
+def menuPrinter():
+    prompt= ("Please make a choice from the menu:\n" \
+             "1 - Print a single house\n" \
+             "2 - Print all the houses\n" \
+             "3 - Sort a new person into a house\n" \
+             "4 - Exit the program\n")
+    print(prompt)
+
+def main():
+    fileName = input("Please enter filename to load from: ")
+    file = open(fileName)    
+    hogwarts = readFile(file)
+    choice = 0
+    while choice!=4:
+        print("\n        -------------------------------------\n")
+        menuPrinter()
+        choice = int(input("Please enter a number between 1 and 4 (inclusive): "))
+        while choice <1 or choice>5:
+            print("That is not a valid number")
+        if choice == 1:
+            houseWanted = input("What house's members would you like to print? ")
+            printOneHouse(hogwarts, houseWanted)
+        elif choice == 2:
+            printAllHouses(hogwarts)
+        elif choice == 3:
+            houseSort(hogwarts)
+        elif choice == 4:
+            print("Thank you for using the Great Houses Program")
+main()

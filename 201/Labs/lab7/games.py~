@@ -1,0 +1,26 @@
+# File: games.py
+# Author: Daniel Diseroad
+# Date: 10/16/16
+# Section: 28
+# E-mail: ddiser1@umbc.edu
+# Description: This program helps the user and their friends decide what game to play
+# Collaboration: During lab, collaboration between
+# students is allowed, although I understand I still
+# must understand the material and complete the
+# assignment myself.
+
+def main():
+    games = ["Twister", "Dodgeball", "Capture the Flag",
+             "Hide and Seek", "Croquet", "Ring Toss", "Ping Pong"]
+    for i in range(len(games)):
+        print((i+1), "-", games[i])
+    choice  = 1
+    choiceList = [0] * len(games)
+    while (choice!= 0):
+        choice = int(input("What game would you like to play? "))
+        if(choice>0 and choice<len(choiceList)+1):
+            choiceList[choice-1] +=1
+    print(choiceList)
+    for i in range(len(games)):
+        print(games[i],"has",choiceList[i],"votes")
+main()

@@ -1,0 +1,78 @@
+Script started on Tue Oct  4 16:01:04 2011
+hw3> ls
+Makefile	input		scanner.l
+hw3> make
+lex  -o scanner.c scanner.l
+cc -o scanner scanner.c -lfl
+hw3> scanner < input
+COMMENT: # SAMPLE INPUT FOR ANACONDA INTEGERS
+COMMENT: # Good decimal  examples
+decimal_int: 0
+decimal_int: -123
+decimal_int: -2
+decimal_int: +23
+decimal_int: 0
+decimal_int: -0
+decimal_int: +0
+decimal_int: 99
+decimal_int: -9
+decimal_int: +44
+COMMENT: # Good hex examples
+hex_int: 0xf
+hex_int: 0xabc
+hex_int: 0X100
+hex_int: -0xaa
+hex_int: +0x0
+hex_int: +0x1
+COMMENT: # Good octal examples
+octal_int: 00
+octal_int: 077
+octal_int: 01
+octal_int: 07
+octal_int: 0347
+COMMENT: # random bad examples
+ignore: 0
+ignore: 9
+ignore: +
+ignore: +
+ignore: 4
+ignore: 4
+ignore: -
+ignore: +
+ignore: 1
+ignore: 3
+ignore: 0
+ignore: 0
+ignore: 0
+ignore: 0
+ignore: 0
+ignore: 1
+ignore: 0
+ignore: 9
+ignore: 9
+ignore: 0
+ignore: x
+ignore: 0
+ignore: x
+ignore: 0
+ignore: 0
+ignore: a
+ignore: 0
+ignore: x
+ignore: 1
+ignore: 2
+ignore: m
+ignore: f
+ignore: o
+ignore: o
+ignore: 0
+ignore: x
+ignore: g
+ignore: +
+ignore: +
+ignore: 2
+ignore: -
+ignore: -
+ignore: 4
+ignore: p
+hw3>

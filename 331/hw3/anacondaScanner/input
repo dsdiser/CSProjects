@@ -1,0 +1,43 @@
+# SAMPLE INPUT FOR ANACONDA INTEGERS
+# Good decimal  examples
+0
+-123
+-2
++23
+0
+-0
++0
+99
+-9
++44
+# Good hex examples
+0xf
+0xabc
+0X100
+-0xaa
++0x0
++0x1
+
+# Good octal examples
+00
+077
+01
+07
+0347
+
+# random bad examples
+09
+++44
+-+13
+000
+001
+099
+0x
+0x00a
+0x12m
+foo
+0xg
++
++ 2
+--4
+p

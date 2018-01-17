@@ -1,0 +1,32 @@
+?
+= true 1
+= false 0
++ 1 2
++ + 1 2 3
++ 1 + 2 3
+==   + + 1 2 3   + 1 + 2 3
++ * 2 3 4
+* + 2 3 4
++ 2 * 3 4
+= a 100
+= b a
+= a + a 1
+> a 100
+not true
+not false
+not not true
+not < a 101
+and 1 0
+and 1 1
+and > a 100 > a b
+or true false
+or false or false or false true
+(or false (or false (or false true)))
+(or (or (or false false) false) true)
+or > a b > b a
+and > a 100 or > a b > b a
+(and (> a 100) (or (> a b) (> b a)))
+if true 100 200
+if false 100 200
+if == 100 + 99 1 ~1 ~2
+.

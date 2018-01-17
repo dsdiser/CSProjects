@@ -1,0 +1,25 @@
+Daniel Diseroad
+CMSC 341 
+
+A) 1. O(n log n)   
+2. The while loop has a O(log n) time because the number is being halved and the for loop at the bottom has a running time of n. Multiplied together to get n log n.
+3. Omega(log n)
+4. Since for loops have a constant lower bound, doThis has Omega(log n) making the answer Omega(log n)
+B) 1. O(n)   
+2.  The loop is run twice, and is bounded by n. It only takes that plus the constant time it takes to assign a variable. So for a number n, it is bounded by O(n).
+3. Omega(1)
+4. The lower bound of the for loop is constant time.
+C) 1. O(n^2)
+2. The while loop is nested by a for loop with a bound of n. Since the while loop is bounded by n as well, the O is n^2.
+3. Omega(n/2)
+4. The for loop will have a constant lower bound, so the while loop will be responsible for the Omega(n/2)
+D) 1. O(n)
+2. The for loop is bounded by n, and since the while loop is not nested, you simply add its    O(log n) to n. Since n is greater, the answer is O(n log n)
+3. Omega(log(n))
+4. A for loop has a lower bound of constant time, and since the lower bound of log(n) is a closer bound, it is Omega(log(n)).
+E) 1. O(n^2)   
+2. Since sum = the sum of I’s which is n = k(k+1)/2 thus the O is n^2.
+3. Omega(n)
+4. Using the same logic, n = k(k+1)/2 making the lower bound Omega of n.
+
+
